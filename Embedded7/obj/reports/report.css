@@ -1,0 +1,87 @@
+
+body {
+  margin-top:45.0pt;
+  margin-left:15.0pt;
+  background: #FFFFFF;
+  background-repeat: no-repeat;
+  background-image: url(./images/reportHeader.png);
+  background-attachment: scroll;
+  background-position: left, top;
+  font-size: 70%;
+  font-family: Verdana, Arial, Helvetica, "MS Sans Serif";
+}
+
+p {
+}
+
+li {
+  list-style: outside;
+  margin-top: 4.0pt;
+}
+
+ul  {
+  text-align: Left;
+  list-style-type: square;
+  margin-left: 0.5cm;
+  margin-top: 6.0pt;
+}
+
+ul ul {
+  list-style-type: disc;
+}
+
+menu {
+  list-style-type: none;
+  margin-left: 0.5cm;
+  margin-top: 2pt;
+}
+
+table {
+  font-size: 100%;
+  margin-top: 1.0em; 
+  margin-bottom: 1.0em;
+}
+
+h1 {
+  font-family: Arial;
+  font-size: 18.0pt;
+  margin-top: 24.0pt;
+  margin-right: 0cm;
+  margin-bottom: 0cm;
+  margin-left: 0cm;
+  margin-bottom: .0001pt;
+}
+
+h2 {
+  font-family: Arial;
+  font-size:125%;
+  margin-top: 1.2em;
+  margin-bottom: .5em;  
+}
+
+h3 {
+  font-family: Arial;
+  font-size:110%;
+  margin-top: 1.2em;  
+  margin-bottom: 0;  
+}
+
+h4 {
+  font-family: Arial;
+  font-size: 105%;
+  margin-top: 1.2em;
+  margin-bottom: .5em;
+}
+
+h5 {
+  font-family: Arial;
+  font-size: 100%;
+  margin-top: 1.2em;
+  margin-bottom: .5em;
+}
+
+code { 
+  font-family: "Courier New"; 
+  font-size: 8pt;
+}
+

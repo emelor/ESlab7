@@ -1,0 +1,150 @@
+# Sample Linker Command File for CodeWarrior for ColdFire
+
+KEEP_SECTION {.vectorTable}
+
+# Memory ranges	
+
+MEMORY {
+	flash       (RX)	: ORIGIN = 0x00000000, LENGTH = 0x00040000
+	vectorram   (RX)	: ORIGIN = 0x20000000, LENGTH = 0x00000400
+#	vectorrom	(RX)	: ORIGIN = 0x00000000, LENGTH = 0x00000400
+#	code        (RX)    : ORIGIN = 0x00000500, LENGTH = 0x0003FB00
+#	ram         (RWX)	: ORIGIN = 0x20000000, LENGTH = 0x00008000
+	sram        (RWX)   : ORIGIN = 0x20000400, LENGTH = 0x00007C00
+#	stack       (RW)    : ORIGIN = 0x20007F00, LENGTH = 0x00000100
+	ipsbar      (RWX)   : ORIGIN = 0x40000000, LENGTH = 0x0
+}
+
+SECTIONS {
+
+# Memory Mapped Registers (IPSBAR= 0x40000000)
+   ___IPSBAR         = 0x40000000;
+
+# 32 Kbytes Internal SRAM
+   ___RAMBAR         = 0x20000000;
+   ___RAMBAR_SIZE    = 0x00008000;
+
+# 256 KByte Internal Flash Memory
+   ___FLASHBAR       = 0x00000000;
+   ___FLASHBAR_SIZE  = 0x00040000;
+
+# Start up Stack
+   ___SP_AFTER_RESET = ___RAMBAR + ___RAMBAR_SIZE - 4;
+
+#	.flash		: {} > flash
+#	.vectorram  : {} > vectorram
+#	.ram		: {} > ram
+#	.sram		: {} > sram
+#	.code		: {} > code
+    .ipsbar     : {} > ipsbar
+ 
+	
+	.vectors :
+	{
+		hal_vector.c(.vectorTable)
+		. = ALIGN (0x4); 
+	} > flash
+
+
+	.text :
+	{
+		*(.text)
+		. = ALIGN (0x4);
+		*(.rodata)
+		. = ALIGN (0x4);		
+		___ROM_AT = .;
+		___DATA_ROM = .;
+		__S_romp     = .;
+	} >> flash
+
+    .data : AT(ADDR(.text)+SIZEOF(.text)) 
+	{
+		___DATA_RAM    = . ;
+
+        *(.exception)	
+		.              = ALIGN(0x10);	
+		__exception_table_start__ = .;
+	    EXCEPTION
+		__exception_table_end__   = .;
+
+		___sinit__    = .;
+	    STATICINIT
+
+        *(.data)
+		.             = ALIGN (0x10);
+		___DATA_END   = .;
+
+		__START_SDATA = .;
+        *(.sdata)
+		.             = ALIGN (0x10);
+		__END_SDATA   = .;
+
+		__SDA_BASE    = .;
+		.             = ALIGN(0x10);
+	} > sram
+
+	.bss :
+	{
+		. = ALIGN(0x10);
+		___BSS_START = .;
+		__START_SBSS = .;
+		*(.sbss)
+		. = ALIGN (0x4);
+		*(SCOMMON)
+		__END_SBSS = .;
+
+		__START_BSS = .;
+		*(.bss)
+		. = ALIGN (0x4);
+		*(COMMON)
+		__END_BSS = .;
+		___BSS_END = .;
+
+		. = ALIGN(0x4);
+	} >> sram
+#
+#	.custom :
+#	{
+#		___SP_END		= ADDR(stack);
+#		___SP_INIT		= ___SP_AFTER_RESET;
+#
+#		. = ALIGN (0x4);
+#	} >> ram
+  	  
+   ___FLASH		     = ADDR(.vectors);
+   ___FLASH_SIZE	 = 0x00040000;
+   ___SRAM		     = ADDR(.data);
+   ___SRAM_SIZE	     = 0x00007C00;
+
+	
+	___VECTOR_RAM	= 0x20000000;
+	___IPSBAR		= ADDR(.ipsbar);
+
+        ___SP_SIZE      = 0x1000;
+	___HEAP_START	= .;
+	___HEAP_END		= ___SRAM + ___SRAM_SIZE - ___SP_SIZE;
+	___SP_END		= ___HEAP_END;
+	___SP_INIT		= ___SP_END + ___SP_SIZE;
+	
+  	___heap_addr 	= ___HEAP_START;
+	___heap_size 	= ___HEAP_END - ___HEAP_START ;
+	__SP_INIT 		= ___SP_INIT;
+
+#	__SP_INIT		= ___SP_INIT;
+ 	___stack_safety = 16;
+ 	___mem_limit = ___HEAP_END;
+#
+
+	_romp_at = ___ROM_AT + SIZEOF(.data);
+	.romp : AT(_romp_at)
+	{
+		__S_romp = _romp_at;
+		WRITEW(___ROM_AT);
+		WRITEW(ADDR(.data));
+		WRITEW(SIZEOF(.data));
+		WRITEW(0);
+		WRITEW(0);
+		WRITEW(0);
+	}
+
+}
