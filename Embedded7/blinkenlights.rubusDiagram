@@ -30,7 +30,7 @@
 		RouterTriggerRerouting="1" 
 		RouterTrimSegments="1" 
 		RouterVicinitySize="3" 
-		Timestamp="2012-08-02T13:05:54" 
+		Timestamp="2012-08-21T11:53:30" 
 		UUID="61c90664-4448-4b5f-8eb2-123980881e1c" 
 		ViewCtrlHottrack="1" 
 		ViewCtrlLockGrid="1" 
@@ -48,7 +48,7 @@
 		<Object 
 			Element="Node" 
 			Pos="(600,320)" 
-			Timestamp="2012-08-02T13:05:54" 
+			Timestamp="2012-08-21T11:53:30" 
 			UUID="4a027228-fa8c-4f09-bff0-85ce840affdb" 
 			>
 			<View 
@@ -69,7 +69,7 @@
 				RouterTriggerRerouting="1" 
 				RouterTrimSegments="1" 
 				RouterVicinitySize="3" 
-				Timestamp="2012-08-02T13:05:54" 
+				Timestamp="2012-08-21T11:53:30" 
 				UUID="602ad475-eb3c-46a2-b48b-6bdcbb8e99ce" 
 				ViewCtrlHottrack="1" 
 				ViewCtrlLockGrid="1" 
@@ -87,7 +87,7 @@
 				<Object 
 					Element="Target" 
 					Pos="(400,320)" 
-					Timestamp="2012-08-02T13:05:54" 
+					Timestamp="2012-08-21T11:53:30" 
 					UUID="6f9f9469-109f-447e-b98b-ec7ec0e712de" 
 					>
 					<View 
@@ -108,7 +108,7 @@
 						RouterTriggerRerouting="1" 
 						RouterTrimSegments="1" 
 						RouterVicinitySize="3" 
-						Timestamp="2012-08-02T13:05:54" 
+						Timestamp="2012-08-21T11:53:30" 
 						UUID="4b2bc4f5-226e-4abf-bd91-840ade6247ab" 
 						ViewCtrlHottrack="1" 
 						ViewCtrlLockGrid="1" 
@@ -124,9 +124,23 @@
 						ViewZoom="100" 
 						>
 						<Object 
+							Element="RedThread" 
+							Pos="(400,440)" 
+							Timestamp="2012-08-21T11:53:30" 
+							UUID="c5621041-dc6d-48c9-95cb-d1613de56f9b" 
+							>
+						</Object>
+						<Object 
+							Element="RedThread" 
+							Pos="(640,440)" 
+							Timestamp="2012-08-21T11:53:30" 
+							UUID="dd1b0b55-fac0-42af-8672-990a308dd5b3" 
+							>
+						</Object>
+						<Object 
 							Element="RedSchedule" 
 							Pos="(640,280)" 
-							Timestamp="2012-08-02T13:05:54" 
+							Timestamp="2012-08-21T11:53:30" 
 							UUID="2ded2c87-140a-4e8c-a419-d67e0e89f2f3" 
 							>
 							<View 
@@ -174,7 +188,7 @@
 						<Object 
 							Element="RedSchedule" 
 							Pos="(400,280)" 
-							Timestamp="2012-08-02T13:05:54" 
+							Timestamp="2012-08-21T11:53:30" 
 							UUID="08d1103d-b8f1-489f-b94a-99849a4f86c8" 
 							>
 							<View 
@@ -195,7 +209,7 @@
 								RouterTriggerRerouting="1" 
 								RouterTrimSegments="1" 
 								RouterVicinitySize="3" 
-								Timestamp="2012-08-02T13:05:54" 
+								Timestamp="2012-08-21T11:53:30" 
 								UUID="9ead4112-429a-477b-b0ca-e45f31514c94" 
 								ViewCtrlHottrack="1" 
 								ViewCtrlLockGrid="1" 
@@ -213,32 +227,11 @@
 								<Object 
 									Element="RedReleasetime" 
 									Pos="(440,320)" 
-									Timestamp="2012-08-02T13:05:54" 
+									Timestamp="2012-08-21T11:53:30" 
 									UUID="19f1dbcc-ddea-47b6-aad2-91af03782e27" 
 									>
 								</Object>
 							</View>
-						</Object>
-						<Object 
-							Element="RedReleasetime" 
-							Pos="(400,640)" 
-							Timestamp="2012-08-02T13:05:54" 
-							UUID="ec04c9df-f5d0-456e-b75e-01b6fc3afd25" 
-							>
-						</Object>
-						<Object 
-							Element="RedThread" 
-							Pos="(400,440)" 
-							Timestamp="2012-08-02T13:05:54" 
-							UUID="c5621041-dc6d-48c9-95cb-d1613de56f9b" 
-							>
-						</Object>
-						<Object 
-							Element="RedThread" 
-							Pos="(640,440)" 
-							Timestamp="2012-08-02T13:05:54" 
-							UUID="dd1b0b55-fac0-42af-8672-990a308dd5b3" 
-							>
 						</Object>
 					</View>
 				</Object>

@@ -50,35 +50,6 @@
 			UUID="6f9f9469-109f-447e-b98b-ec7ec0e712de" 
 			>
 			<Plugins 
-				Name="Analyze" 
-				UUID="7262fe1b-32b6-4e57-b083-c693fa6dfd18" 
-				>
-			</Plugins>
-			<Plugins 
-				Name="Synthesize" 
-				UUID="ebdef700-17da-4dab-b04b-62a3ca816946" 
-				>
-				<Plugin 
-					Name="Generic" 
-					PluginActive="1" 
-					PluginCopyright="Copyright 1995-2011 Arcticus Systems AB" 
-					PluginDate="Feb 21 2011" 
-					PluginDescription="Generic Configurator Target code generator for RubusRTE-1.0 platform" 
-					PluginVersion="v3.9.1 (Build 77) 2011a" 
-					UUID="2490ba31-fc86-4874-80cd-714c315d61d1" 
-					>
-				</Plugin>
-				<Plugin 
-					Name="InfineonC166" 
-					PluginCopyright="Copyright 1995-2011 Arcticus Systems AB" 
-					PluginDate="Feb 21 2011" 
-					PluginDescription="Configurator Target code generator for RubusRTE-1.0 platform Infineon C166" 
-					PluginVersion="v3.9.1 (Build 77) 2011a" 
-					UUID="eee1efdf-aacb-4bb4-ab53-eb0f33bca870" 
-					>
-				</Plugin>
-			</Plugins>
-			<Plugins 
 				Name="Validate" 
 				UUID="3572d531-d94a-4949-b949-7933a081c842" 
 				>
@@ -93,32 +64,35 @@
 					>
 				</Plugin>
 			</Plugins>
-			<RedSchedule 
-				Name="redScheduleStart" 
-				StartSchedueleActivate="0" 
-				TimePeriod="10 ms" 
-				UUID="08d1103d-b8f1-489f-b94a-99849a4f86c8" 
+			<Plugins 
+				Name="Synthesize" 
+				UUID="ebdef700-17da-4dab-b04b-62a3ca816946" 
 				>
-				<RedReleasetime 
-					Name="red_releasetime" 
-					TimeRelease="0 s" 
-					UUID="19f1dbcc-ddea-47b6-aad2-91af03782e27" 
+				<Plugin 
+					Name="InfineonC166" 
+					PluginCopyright="Copyright 1995-2011 Arcticus Systems AB" 
+					PluginDate="Feb 21 2011" 
+					PluginDescription="Configurator Target code generator for RubusRTE-1.0 platform Infineon C166" 
+					PluginVersion="v3.9.1 (Build 77) 2011a" 
+					UUID="eee1efdf-aacb-4bb4-ab53-eb0f33bca870" 
 					>
-					<RedInstance 
-						Index="0" 
-						Name="redInstance" 
-						TimeDeadline="10 ms" 
-						UUID="7e7f3162-6842-4683-b2f0-306762bfa517" 
-						>
-						<CrossRef 
-							Name="ObjectSource" 
-							Reference="..\..\redStart" 
-							UUID="60d76b55-cdbd-463f-9f8d-79d55a889cfe" 
-							>
-						</CrossRef>
-					</RedInstance>
-				</RedReleasetime>
-			</RedSchedule>
+				</Plugin>
+				<Plugin 
+					Name="Generic" 
+					PluginActive="1" 
+					PluginCopyright="Copyright 1995-2011 Arcticus Systems AB" 
+					PluginDate="Feb 21 2011" 
+					PluginDescription="Generic Configurator Target code generator for RubusRTE-1.0 platform" 
+					PluginVersion="v3.9.1 (Build 77) 2011a" 
+					UUID="2490ba31-fc86-4874-80cd-714c315d61d1" 
+					>
+				</Plugin>
+			</Plugins>
+			<Plugins 
+				Name="Analyze" 
+				UUID="7262fe1b-32b6-4e57-b083-c693fa6dfd18" 
+				>
+			</Plugins>
 			<RedSchedule 
 				Name="redScheduleBlinky0" 
 				StartSchedueleActivate="0" 
@@ -145,16 +119,32 @@
 					</RedInstance>
 				</RedReleasetime>
 			</RedSchedule>
-			<RedThread 
-				Entry="redStartMain" 
-				EntryAllocate="0" 
-				Name="redStart" 
-				TimeACET="0 s" 
-				TimeBCET="0 s" 
-				TimeWCET="0 s" 
-				UUID="c5621041-dc6d-48c9-95cb-d1613de56f9b" 
+			<RedSchedule 
+				Name="redScheduleStart" 
+				StartSchedueleActivate="0" 
+				TimePeriod="10 ms" 
+				UUID="08d1103d-b8f1-489f-b94a-99849a4f86c8" 
 				>
-			</RedThread>
+				<RedReleasetime 
+					Name="red_releasetime" 
+					TimeRelease="0 s" 
+					UUID="19f1dbcc-ddea-47b6-aad2-91af03782e27" 
+					>
+					<RedInstance 
+						Index="0" 
+						Name="redInstance" 
+						TimeDeadline="10 ms" 
+						UUID="7e7f3162-6842-4683-b2f0-306762bfa517" 
+						>
+						<CrossRef 
+							Name="ObjectSource" 
+							Reference="..\..\redStart" 
+							UUID="60d76b55-cdbd-463f-9f8d-79d55a889cfe" 
+							>
+						</CrossRef>
+					</RedInstance>
+				</RedReleasetime>
+			</RedSchedule>
 			<RedThread 
 				CType="int" 
 				Entry="blinky0Main" 
@@ -165,6 +155,16 @@
 				TimeBCET="0 s" 
 				TimeWCET="0 s" 
 				UUID="dd1b0b55-fac0-42af-8672-990a308dd5b3" 
+				>
+			</RedThread>
+			<RedThread 
+				Entry="redStartMain" 
+				EntryAllocate="0" 
+				Name="redStart" 
+				TimeACET="0 s" 
+				TimeBCET="0 s" 
+				TimeWCET="0 s" 
+				UUID="c5621041-dc6d-48c9-95cb-d1613de56f9b" 
 				>
 			</RedThread>
 		</Target>
