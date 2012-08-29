@@ -3,6 +3,8 @@
 #include <r_ex_r.h>
 #include "red.h"
 #include <LEDDriver.h>
+#include "support_common.h"
+#include <stdio.h>
 
 
 void redStartMain(void) {
@@ -16,6 +18,10 @@ blinky3Args = 0;
 redSetSchedule(&redScheduleBlinky0);
 //redSetSchedule(&redSchedule2);
 }
+
+
+
+
 
 void blinkyReschedMain (blinkyModeType *state)
 {
@@ -37,6 +43,7 @@ halExit(); break;
 }
 
 void blinky0Main (int *state) {
+//printf("hej");
 if (*state == 0) {
 *state = 1;
 leds_turnON(0);
