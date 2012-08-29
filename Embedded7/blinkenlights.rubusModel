@@ -49,35 +49,12 @@
 			TargetPrefix="ex" 
 			UUID="6f9f9469-109f-447e-b98b-ec7ec0e712de" 
 			>
-			<Plugins 
-				Name="Analyze" 
-				UUID="7262fe1b-32b6-4e57-b083-c693fa6dfd18" 
-				>
-			</Plugins>
-			<Plugins 
-				Name="Synthesize" 
-				UUID="ebdef700-17da-4dab-b04b-62a3ca816946" 
-				>
-				<Plugin 
-					Name="Generic" 
-					PluginActive="1" 
-					PluginCopyright="Copyright 1995-2011 Arcticus Systems AB" 
-					PluginDate="Feb 21 2011" 
-					PluginDescription="Generic Configurator Target code generator for RubusRTE-1.0 platform" 
-					PluginVersion="v3.9.1 (Build 77) 2011a" 
-					UUID="2490ba31-fc86-4874-80cd-714c315d61d1" 
-					>
-				</Plugin>
-				<Plugin 
-					Name="InfineonC166" 
-					PluginCopyright="Copyright 1995-2011 Arcticus Systems AB" 
-					PluginDate="Feb 21 2011" 
-					PluginDescription="Configurator Target code generator for RubusRTE-1.0 platform Infineon C166" 
-					PluginVersion="v3.9.1 (Build 77) 2011a" 
-					UUID="eee1efdf-aacb-4bb4-ab53-eb0f33bca870" 
-					>
-				</Plugin>
-			</Plugins>
+			<InlineCMain><![CDATA[]]></InlineCMain>
+			<InlineCPost><![CDATA[]]></InlineCPost>
+			<InlineCPre><![CDATA[]]></InlineCPre>
+			<InlineHMain><![CDATA[#include "red.h"]]></InlineHMain>
+			<InlineHPost><![CDATA[]]></InlineHPost>
+			<InlineHPre><![CDATA[]]></InlineHPre>
 			<Plugins 
 				Name="Validate" 
 				UUID="3572d531-d94a-4949-b949-7933a081c842" 
@@ -93,12 +70,163 @@
 					>
 				</Plugin>
 			</Plugins>
+			<Plugins 
+				Name="Synthesize" 
+				UUID="ebdef700-17da-4dab-b04b-62a3ca816946" 
+				>
+				<Plugin 
+					Name="InfineonC166" 
+					PluginCopyright="Copyright 1995-2011 Arcticus Systems AB" 
+					PluginDate="Feb 21 2011" 
+					PluginDescription="Configurator Target code generator for RubusRTE-1.0 platform Infineon C166" 
+					PluginVersion="v3.9.1 (Build 77) 2011a" 
+					UUID="eee1efdf-aacb-4bb4-ab53-eb0f33bca870" 
+					>
+				</Plugin>
+				<Plugin 
+					Name="Generic" 
+					PluginActive="1" 
+					PluginCopyright="Copyright 1995-2011 Arcticus Systems AB" 
+					PluginDate="Feb 21 2011" 
+					PluginDescription="Generic Configurator Target code generator for RubusRTE-1.0 platform" 
+					PluginVersion="v3.9.1 (Build 77) 2011a" 
+					UUID="2490ba31-fc86-4874-80cd-714c315d61d1" 
+					>
+				</Plugin>
+			</Plugins>
+			<Plugins 
+				Name="Analyze" 
+				UUID="7262fe1b-32b6-4e57-b083-c693fa6dfd18" 
+				>
+			</Plugins>
+			<RedSchedule 
+				Name="redScheduleBlinky0" 
+				StartSchedueleActivate="0" 
+				TimePeriod="100 ms" 
+				UUID="2ded2c87-140a-4e8c-a419-d67e0e89f2f3" 
+				>
+				<RedReleasetime 
+					Name="red_releasetime" 
+					TimeRelease="0 s" 
+					UUID="a4ec9794-f1a9-44b4-b4e0-a11cc26281ce" 
+					>
+					<RedInstance 
+						Index="1" 
+						Name="redInstance_1" 
+						TimeDeadline="99 ms" 
+						UUID="dc0d8334-89f3-44c9-8473-46b6beb2dd1c" 
+						>
+						<CrossRef 
+							Name="ObjectSource" 
+							Reference="..\..\blinkyResched" 
+							UUID="ed401bb3-7dd3-4666-b4bc-34fa10b05d6f" 
+							>
+						</CrossRef>
+					</RedInstance>
+					<RedInstance 
+						Index="0" 
+						Name="redInstance" 
+						TimeDeadline="2 ms" 
+						UUID="d4922227-a7bb-43c4-a741-7dbb457fe267" 
+						>
+						<CrossRef 
+							Name="ObjectSource" 
+							Reference="..\..\blinky0" 
+							UUID="8d874e8f-b8e8-4e3c-839a-9ec6e2c74321" 
+							>
+						</CrossRef>
+					</RedInstance>
+				</RedReleasetime>
+			</RedSchedule>
+			<RedSchedule 
+				Name="redScheduleStart" 
+				StartSchedueleActivate="0" 
+				TimePeriod="10 ms" 
+				UUID="08d1103d-b8f1-489f-b94a-99849a4f86c8" 
+				>
+				<RedReleasetime 
+					Name="red_releasetime" 
+					TimeRelease="0 s" 
+					UUID="19f1dbcc-ddea-47b6-aad2-91af03782e27" 
+					>
+					<RedInstance 
+						Index="0" 
+						Name="redInstance" 
+						TimeDeadline="10 ms" 
+						UUID="7e7f3162-6842-4683-b2f0-306762bfa517" 
+						>
+						<CrossRef 
+							Name="ObjectSource" 
+							Reference="..\..\redStart" 
+							UUID="60d76b55-cdbd-463f-9f8d-79d55a889cfe" 
+							>
+						</CrossRef>
+					</RedInstance>
+				</RedReleasetime>
+			</RedSchedule>
 			<RedSchedule 
 				Name="redSchedule2" 
 				StartSchedueleActivate="0" 
 				TimePeriod="200 ms" 
 				UUID="70094e3f-9de5-423a-8506-de3901911a0d" 
 				>
+				<RedReleasetime 
+					Name="red_releasetime_1" 
+					TimeRelease="50 ms" 
+					UUID="6830875f-1171-4953-a4c6-43741037dbc2" 
+					>
+					<RedInstance 
+						Index="0" 
+						Name="redInstance" 
+						TimeDeadline="52 ms" 
+						UUID="db6a5a14-80ca-4f50-9ea5-8460189fa768" 
+						>
+						<CrossRef 
+							Name="ObjectSource" 
+							Reference="..\..\blinky1" 
+							UUID="4effb3aa-90e8-4815-924f-491f9958f147" 
+							>
+						</CrossRef>
+					</RedInstance>
+				</RedReleasetime>
+				<RedReleasetime 
+					Name="red_releasetime_4" 
+					TimeRelease="150 ms" 
+					UUID="a95e2ac9-5ac6-4afa-83fe-84088008f54d" 
+					>
+					<RedInstance 
+						Index="0" 
+						Name="redInstance" 
+						TimeDeadline="199 ms" 
+						UUID="2ca9cfbb-e708-4c6a-8fb9-6a516438aa32" 
+						>
+						<CrossRef 
+							Name="ObjectSource" 
+							Reference="..\..\blinkyResched" 
+							UUID="07c1aeb2-6233-43c7-8f96-0c582f28bdcb" 
+							>
+						</CrossRef>
+					</RedInstance>
+				</RedReleasetime>
+				<RedReleasetime 
+					Name="red_releasetime" 
+					TimeRelease="0 ms" 
+					UUID="7b48cb71-beb1-447e-979b-513ef2c30c19" 
+					>
+					<RedInstance 
+						Index="0" 
+						Name="redInstance" 
+						TimeDeadline="2  ms" 
+						UUID="507eae00-0bbd-4156-8f02-65afa8ffa660" 
+						>
+						<CrossRef 
+							Name="ObjectSource" 
+							Reference="..\..\blinky0" 
+							UUID="f5438abe-e89f-4df5-b734-6e8716b6bc12" 
+							>
+						</CrossRef>
+					</RedInstance>
+				</RedReleasetime>
 				<RedReleasetime 
 					Name="red_releasetime_2" 
 					TimeRelease="100 ms" 
@@ -137,97 +265,41 @@
 						</CrossRef>
 					</RedInstance>
 				</RedReleasetime>
-				<RedReleasetime 
-					Name="red_releasetime" 
-					TimeRelease="0 ms" 
-					UUID="7b48cb71-beb1-447e-979b-513ef2c30c19" 
-					>
-					<RedInstance 
-						Index="0" 
-						Name="redInstance" 
-						TimeDeadline="2  ms" 
-						UUID="507eae00-0bbd-4156-8f02-65afa8ffa660" 
-						>
-						<CrossRef 
-							Name="ObjectSource" 
-							Reference="..\..\blinky0" 
-							UUID="f5438abe-e89f-4df5-b734-6e8716b6bc12" 
-							>
-						</CrossRef>
-					</RedInstance>
-				</RedReleasetime>
-				<RedReleasetime 
-					Name="red_releasetime_1" 
-					TimeRelease="50 ms" 
-					UUID="6830875f-1171-4953-a4c6-43741037dbc2" 
-					>
-					<RedInstance 
-						Index="0" 
-						Name="redInstance" 
-						TimeDeadline="52 ms" 
-						UUID="db6a5a14-80ca-4f50-9ea5-8460189fa768" 
-						>
-						<CrossRef 
-							Name="ObjectSource" 
-							Reference="..\..\blinky1" 
-							UUID="4effb3aa-90e8-4815-924f-491f9958f147" 
-							>
-						</CrossRef>
-					</RedInstance>
-				</RedReleasetime>
 			</RedSchedule>
-			<RedSchedule 
-				Name="redScheduleStart" 
-				StartSchedueleActivate="0" 
-				TimePeriod="10 ms" 
-				UUID="08d1103d-b8f1-489f-b94a-99849a4f86c8" 
+			<RedThread 
+				Entry="redStartMain" 
+				EntryAllocate="0" 
+				Name="redStart" 
+				TimeACET="0 s" 
+				TimeBCET="0 s" 
+				TimeWCET="0 s" 
+				UUID="c5621041-dc6d-48c9-95cb-d1613de56f9b" 
 				>
-				<RedReleasetime 
-					Name="red_releasetime" 
-					TimeRelease="0 s" 
-					UUID="19f1dbcc-ddea-47b6-aad2-91af03782e27" 
-					>
-					<RedInstance 
-						Index="0" 
-						Name="redInstance" 
-						TimeDeadline="10 ms" 
-						UUID="7e7f3162-6842-4683-b2f0-306762bfa517" 
-						>
-						<CrossRef 
-							Name="ObjectSource" 
-							Reference="..\..\redStart" 
-							UUID="60d76b55-cdbd-463f-9f8d-79d55a889cfe" 
-							>
-						</CrossRef>
-					</RedInstance>
-				</RedReleasetime>
-			</RedSchedule>
-			<RedSchedule 
-				Name="redScheduleBlinky0" 
-				StartSchedueleActivate="0" 
-				TimePeriod="100 ms" 
-				UUID="2ded2c87-140a-4e8c-a419-d67e0e89f2f3" 
+			</RedThread>
+			<RedThread 
+				CType="int" 
+				Entry="blinky1Main" 
+				EntryAllocate="1" 
+				EntryArgument="blinky1Args" 
+				Name="blinky1" 
+				TimeACET="0 s" 
+				TimeBCET="0 s" 
+				TimeWCET="0 s" 
+				UUID="78109545-2a08-4892-a667-17f2c453bc82" 
 				>
-				<RedReleasetime 
-					Name="red_releasetime" 
-					TimeRelease="0 s" 
-					UUID="a4ec9794-f1a9-44b4-b4e0-a11cc26281ce" 
-					>
-					<RedInstance 
-						Index="0" 
-						Name="redInstance" 
-						TimeDeadline="2 ms" 
-						UUID="d4922227-a7bb-43c4-a741-7dbb457fe267" 
-						>
-						<CrossRef 
-							Name="ObjectSource" 
-							Reference="..\..\blinky0" 
-							UUID="8d874e8f-b8e8-4e3c-839a-9ec6e2c74321" 
-							>
-						</CrossRef>
-					</RedInstance>
-				</RedReleasetime>
-			</RedSchedule>
+			</RedThread>
+			<RedThread 
+				CType="blinkyModeType" 
+				Entry="blinkyReschedMain" 
+				EntryAllocate="1" 
+				EntryArgument="blinkyReschedArgs" 
+				Name="blinkyResched" 
+				TimeACET="0 s" 
+				TimeBCET="0 s" 
+				TimeWCET="0 s" 
+				UUID="9d24fa4f-a6d4-4bc7-9290-9513f07e4b1f" 
+				>
+			</RedThread>
 			<RedThread 
 				CType="int" 
 				Entry="blinky2Main" 
@@ -262,28 +334,6 @@
 				TimeBCET="0 s" 
 				TimeWCET="0 s" 
 				UUID="dd1b0b55-fac0-42af-8672-990a308dd5b3" 
-				>
-			</RedThread>
-			<RedThread 
-				Entry="redStartMain" 
-				EntryAllocate="0" 
-				Name="redStart" 
-				TimeACET="0 s" 
-				TimeBCET="0 s" 
-				TimeWCET="0 s" 
-				UUID="c5621041-dc6d-48c9-95cb-d1613de56f9b" 
-				>
-			</RedThread>
-			<RedThread 
-				CType="int" 
-				Entry="blinky1Main" 
-				EntryAllocate="1" 
-				EntryArgument="blinky1Args" 
-				Name="blinky1" 
-				TimeACET="0 s" 
-				TimeBCET="0 s" 
-				TimeWCET="0 s" 
-				UUID="78109545-2a08-4892-a667-17f2c453bc82" 
 				>
 			</RedThread>
 		</Target>

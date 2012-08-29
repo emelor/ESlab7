@@ -10,17 +10,17 @@
 -->
 <document 
 	Model="REPORT" 
-	UUID="b8ca2316-30a0-4e5b-8143-2a5185fad3ac" 
+	UUID="998bbb5a-9f72-46bb-9000-3a16fb24c0e4" 
 	version="2010-08-01" 
 	>
 	<Header 
-		Date="2012-08-24" 
+		Date="2012-08-29" 
 		Description="Configurator Target model validator for RubusRTE-1.0 platform" 
 		Name="Plugin report for Validate" 
 		Platform="RubusRTE-1.0" 
 		Plugin="Validate" 
-		Time="T14:44:06" 
-		UUID="4507e112-942b-4210-9f90-4e0846a6068c" 
+		Time="T10:08:02" 
+		UUID="583629db-29e8-4515-b664-989e50a8584e" 
 		Version="v3.9.1 (Build 77) 2011a" 
 		>
 	</Header>

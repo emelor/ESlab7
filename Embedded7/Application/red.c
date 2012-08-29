@@ -7,12 +7,33 @@
 
 void redStartMain(void) {
 leds_initialise();
+blinkyReschedArgs.counter = 0;
+blinkyReschedArgs.schedule = 1;
 blinky0Args = 0;
 blinky1Args = 0;
 blinky2Args = 0;
 blinky3Args = 0;
-//redSetSchedule(&redScheduleBlinky0);
+redSetSchedule(&redScheduleBlinky0);
+//redSetSchedule(&redSchedule2);
+}
+
+void blinkyReschedMain (blinkyModeType *state)
+{
+(state->counter)++;
+if (state->counter == 10) {
+state->counter = 0;
+state->schedule = 3 - state->schedule; //switch
+switch (state->schedule) {
+case 1:
+redSetSchedule(&redScheduleBlinky0);
+break;
+case 2:
 redSetSchedule(&redSchedule2);
+break;
+default:
+halExit(); break;
+}
+}
 }
 
 void blinky0Main (int *state) {
