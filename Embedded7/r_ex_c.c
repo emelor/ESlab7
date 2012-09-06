@@ -22,6 +22,40 @@
 #include "r_ex_b.h"
 
 /*==========================================================
+** Green Thread comXhpRx
+==========================================================*/
+extern greenThreadCB_t comXhpRxCB;
+void comXhpRxInternal(void)
+
+{ R_TYPE_TIME_EXEC execTime;
+
+  greenEnter();
+  bsLogPut(3,R_LOG_EVENT_1);
+  R_EXEC_TIME_START(execTime)
+  comXhpRx_entry();
+  R_EXEC_TIME_STOP(execTime,execTime,0u)
+  bsLogPut(3,R_LOG_EVENT_2);
+  greenExit();
+}
+
+/*==========================================================
+** Green Thread comXhpTx
+==========================================================*/
+extern greenThreadCB_t comXhpTxCB;
+void comXhpTxInternal(void)
+
+{ R_TYPE_TIME_EXEC execTime;
+
+  greenEnter();
+  bsLogPut(4,R_LOG_EVENT_1);
+  R_EXEC_TIME_START(execTime)
+  comXhpTx_entry();
+  R_EXEC_TIME_STOP(execTime,execTime,0u)
+  bsLogPut(4,R_LOG_EVENT_2);
+  greenExit();
+}
+
+/*==========================================================
 ** redStartInternal()
 ==========================================================*/
 extern redThreadCB_t redStartCB;
@@ -29,14 +63,14 @@ void redStartInternal(int_t deadline)
 
 { R_TYPE_TIME_EXEC execTime;
 
-  bsLogPut(7,R_LOG_EVENT_1);
+  bsLogPut(11,R_LOG_EVENT_1);
   R_RED_SET_DEADLINE(&redStart,deadline)
   R_EXEC_TIME_START(execTime)
   R_RED_KERNEL_EXIT;
   redStartMain();
   R_RED_KERNEL_ENTER;
   R_EXEC_TIME_STOP(execTime,execTime,0u)
-  bsLogPut(7,R_LOG_EVENT_2);
+  bsLogPut(11,R_LOG_EVENT_2);
 }
 
 /*==========================================================
@@ -47,14 +81,14 @@ void blinkyReschedInternal(int_t deadline)
 
 { R_TYPE_TIME_EXEC execTime;
 
-  bsLogPut(8,R_LOG_EVENT_1);
+  bsLogPut(12,R_LOG_EVENT_1);
   R_RED_SET_DEADLINE(&blinkyResched,deadline)
   R_EXEC_TIME_START(execTime)
   R_RED_KERNEL_EXIT;
   blinkyReschedMain(&blinkyReschedArgs);
   R_RED_KERNEL_ENTER;
   R_EXEC_TIME_STOP(execTime,execTime,0u)
-  bsLogPut(8,R_LOG_EVENT_2);
+  bsLogPut(12,R_LOG_EVENT_2);
 }
 
 /*==========================================================
@@ -65,14 +99,14 @@ void blinky0Internal(int_t deadline)
 
 { R_TYPE_TIME_EXEC execTime;
 
-  bsLogPut(9,R_LOG_EVENT_1);
+  bsLogPut(13,R_LOG_EVENT_1);
   R_RED_SET_DEADLINE(&blinky0,deadline)
   R_EXEC_TIME_START(execTime)
   R_RED_KERNEL_EXIT;
   blinky0Main(&blinky0Args);
   R_RED_KERNEL_ENTER;
   R_EXEC_TIME_STOP(execTime,execTime,0u)
-  bsLogPut(9,R_LOG_EVENT_2);
+  bsLogPut(13,R_LOG_EVENT_2);
 }
 
 /*==========================================================
@@ -83,14 +117,14 @@ void blinky1Internal(int_t deadline)
 
 { R_TYPE_TIME_EXEC execTime;
 
-  bsLogPut(10,R_LOG_EVENT_1);
+  bsLogPut(14,R_LOG_EVENT_1);
   R_RED_SET_DEADLINE(&blinky1,deadline)
   R_EXEC_TIME_START(execTime)
   R_RED_KERNEL_EXIT;
   blinky1Main(&blinky1Args);
   R_RED_KERNEL_ENTER;
   R_EXEC_TIME_STOP(execTime,execTime,0u)
-  bsLogPut(10,R_LOG_EVENT_2);
+  bsLogPut(14,R_LOG_EVENT_2);
 }
 
 /*==========================================================
@@ -101,14 +135,14 @@ void blinky2Internal(int_t deadline)
 
 { R_TYPE_TIME_EXEC execTime;
 
-  bsLogPut(11,R_LOG_EVENT_1);
+  bsLogPut(15,R_LOG_EVENT_1);
   R_RED_SET_DEADLINE(&blinky2,deadline)
   R_EXEC_TIME_START(execTime)
   R_RED_KERNEL_EXIT;
   blinky2Main(&blinky2Args);
   R_RED_KERNEL_ENTER;
   R_EXEC_TIME_STOP(execTime,execTime,0u)
-  bsLogPut(11,R_LOG_EVENT_2);
+  bsLogPut(15,R_LOG_EVENT_2);
 }
 
 /*==========================================================
@@ -119,14 +153,14 @@ void blinky3Internal(int_t deadline)
 
 { R_TYPE_TIME_EXEC execTime;
 
-  bsLogPut(12,R_LOG_EVENT_1);
+  bsLogPut(16,R_LOG_EVENT_1);
   R_RED_SET_DEADLINE(&blinky3,deadline)
   R_EXEC_TIME_START(execTime)
   R_RED_KERNEL_EXIT;
   blinky3Main(&blinky3Args);
   R_RED_KERNEL_ENTER;
   R_EXEC_TIME_STOP(execTime,execTime,0u)
-  bsLogPut(12,R_LOG_EVENT_2);
+  bsLogPut(16,R_LOG_EVENT_2);
 }
 
 /*==========================================================
@@ -136,7 +170,7 @@ extern void redScheduleBlinky0_5(void);
 void redScheduleBlinky0_0(void)
 
 {
-  bsLogPut(13,R_LOG_EVENT_1);
+  bsLogPut(17,R_LOG_EVENT_1);
   R_RED_NEXT(&redScheduleBlinky0_5,5)
   blueActivate(&blueKernel);
   blinky0Internal(2);
@@ -358,7 +392,7 @@ extern void redSchedule2_5(void);
 void redSchedule2_0(void)
 
 {
-  bsLogPut(14,R_LOG_EVENT_1);
+  bsLogPut(18,R_LOG_EVENT_1);
   R_RED_NEXT(&redSchedule2_5,5)
   blueActivate(&blueKernel);
   blinky0Internal(2);
@@ -803,7 +837,7 @@ extern void redScheduleStart_5(void);
 void redScheduleStart_0(void)
 
 {
-  bsLogPut(15,R_LOG_EVENT_1);
+  bsLogPut(19,R_LOG_EVENT_1);
   R_RED_NEXT(&redScheduleStart_5,5)
   blueActivate(&blueKernel);
   redStartInternal(10);
@@ -820,6 +854,36 @@ void redScheduleStart_5(void)
 }
 
 /*==========================================================
+** Blue thread xhpHandlerRxInternal()
+==========================================================*/
+extern blueThreadCB_t xhpHandlerRxCB;
+void xhpHandlerRxInternal(void)
+
+{ R_TYPE_TIME_EXEC execTime;
+
+  bsLogPut(6,R_LOG_EVENT_1);
+  R_EXEC_TIME_START(execTime)
+  xhpHandlerRx_entry();
+  R_EXEC_TIME_STOP(execTime,execTime,0u)
+  bsLogPut(6,R_LOG_EVENT_2);
+}
+
+/*==========================================================
+** Blue thread xhpHandlerTxInternal()
+==========================================================*/
+extern blueThreadCB_t xhpHandlerTxCB;
+void xhpHandlerTxInternal(void)
+
+{ R_TYPE_TIME_EXEC execTime;
+
+  bsLogPut(7,R_LOG_EVENT_1);
+  R_EXEC_TIME_START(execTime)
+  xhpHandlerTx_entry();
+  R_EXEC_TIME_STOP(execTime,execTime,0u)
+  bsLogPut(7,R_LOG_EVENT_2);
+}
+
+/*==========================================================
 ** Rubus OS Initialisation
 ==========================================================*/
 int_t bsRubusInit(void)
@@ -832,6 +896,11 @@ int_t bsRubusInit(void)
   }
 
   rcode = redInit(&redScheduleStart);
+  if (rcode != R_OK) {
+    return(rcode);
+  }
+
+  rcode = greenInit();
   if (rcode != R_OK) {
     return(rcode);
   }

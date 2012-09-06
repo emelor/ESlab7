@@ -21,6 +21,16 @@
 #include "r_ex_b.h"
 
 /*==========================================================
+** Green Thread comXhpRx
+==========================================================*/
+greenThreadCB_t comXhpRxCB;
+
+/*==========================================================
+** Green Thread comXhpTx
+==========================================================*/
+greenThreadCB_t comXhpTxCB;
+
+/*==========================================================
 ** redAttr
 ==========================================================*/
 struct {
@@ -72,9 +82,9 @@ struct {
   uint_t      stack[(1024u + sizeof(uint_t) - 1u) / sizeof(uint_t)];
 } blueStack;
 
-blueThreadCB_t * R_LOC_CB blueIntrTable[3];
+blueThreadCB_t * R_LOC_CB blueIntrTable[5];
 blueThreadCB_t * R_LOC_CB * const blueIntrTableTop = &blueIntrTable[0];
-blueThreadCB_t * R_LOC_CB * const blueIntrTableBottom = &blueIntrTable[2];
+blueThreadCB_t * R_LOC_CB * const blueIntrTableBottom = &blueIntrTable[4];
 
 /*==========================================================
 ** Blue Thread blueKernel
@@ -82,11 +92,29 @@ blueThreadCB_t * R_LOC_CB * const blueIntrTableBottom = &blueIntrTable[2];
 blueThreadCB_t blueKernelCB;
 
 /*==========================================================
+** Blue Thread xhpHandlerRx
+==========================================================*/
+struct {
+  bsStack_t header;
+  uint_t      stack[(256u + sizeof(uint_t) - 1u) / sizeof(uint_t)];
+} xhpHandlerRxStack;
+blueThreadCB_t xhpHandlerRxCB;
+
+/*==========================================================
+** Blue Thread xhpHandlerTx
+==========================================================*/
+struct {
+  bsStack_t header;
+  uint_t      stack[(256u + sizeof(uint_t) - 1u) / sizeof(uint_t)];
+} xhpHandlerTxStack;
+blueThreadCB_t xhpHandlerTxCB;
+
+/*==========================================================
 ** Blue Thread blueIdle
 ==========================================================*/
 blueThreadCB_t blueIdleCB;
 
-bsLogIdArray_t bsLogIdArray[16];
+bsLogIdArray_t bsLogIdArray[20];
 
 /*==========================================================
 ** bsAttr

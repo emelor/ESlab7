@@ -2,4 +2,5 @@
 # Linker input object file(s) for project 'object.rubusDesigner'
 #
 
+"obj\RubusOS_XHP.obj"
 "obj\blinkenlights.obj"

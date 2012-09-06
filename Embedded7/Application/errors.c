@@ -4,6 +4,12 @@
 #include <red/r_thread.h>
 #include <r_ex_r.h>
 #include <hal.h>
+#include "support_common.h"
+#include <stdio.h>
+#include "ros_services.h"
+
+//printf("RED ERROR %d in %s\n\r", code,bsObjectName(object->index));
+
 
 int_t errorCode;
 bsObject_t const *errorObject;

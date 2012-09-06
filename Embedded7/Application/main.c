@@ -3,6 +3,7 @@
 #include <ros_xhp.h>
 #include <blue/b_thread.h>
 #include "r_ex_r.h"
+#include <stdio.h>
 
 
 uint32_t rubusIdleLoop;

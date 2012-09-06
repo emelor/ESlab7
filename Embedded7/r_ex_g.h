@@ -16,6 +16,7 @@
 ==========================================================*/
 #include <basic/bs_basic.h>
 #include <green/g_thread.h>
+#include <blue/b_signal.h>
 
 /*==========================================================
 ** Inline
@@ -24,6 +25,18 @@
 #ifdef __cplusplus
 extern "C" {
 #endif
+
+/*==========================================================
+** Green Thread comXhpRx
+==========================================================*/
+extern greenThreadAttr_t const comXhpRx;
+extern void comXhpRx_entry(void);
+
+/*==========================================================
+** Green Thread comXhpTx
+==========================================================*/
+extern greenThreadAttr_t const comXhpTx;
+extern void comXhpTx_entry(void);
 
 
 #ifdef __cplusplus

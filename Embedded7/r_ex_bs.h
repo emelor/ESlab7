@@ -26,7 +26,7 @@ extern "C" {
 #endif
 
 
-extern bsIdNameElement_t const bsIdNameTable[16];
+extern bsIdNameElement_t const bsIdNameTable[20];
 extern bsName_t bsObjectName(int_t id);
 extern int_t bsObjectByName(bsName_t str);
 

@@ -33,6 +33,18 @@ extern blueThreadAttr_t const blueKernel;
 extern void blueKernelEntry(void);
 
 /*==========================================================
+** Blue Thread xhpHandlerRx
+==========================================================*/
+extern blueThreadAttr_t const xhpHandlerRx;
+extern void xhpHandlerRx_entry(void);
+
+/*==========================================================
+** Blue Thread xhpHandlerTx
+==========================================================*/
+extern blueThreadAttr_t const xhpHandlerTx;
+extern void xhpHandlerTx_entry(void);
+
+/*==========================================================
 ** Blue Thread blueIdle
 ==========================================================*/
 extern blueThreadAttr_t const blueIdle;

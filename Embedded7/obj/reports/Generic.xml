@@ -10,41 +10,41 @@
 -->
 <document 
 	Model="REPORT" 
-	UUID="e4a23f54-1849-49d0-9354-f30544f33bd3" 
+	UUID="f64df8d2-f93d-4dda-a75f-9b384eaf162f" 
 	version="2010-08-01" 
 	>
 	<Header 
-		Date="2012-08-29" 
+		Date="2012-09-06" 
 		Description="Generic Configurator Target code generator for RubusRTE-1.0 platform" 
 		Name="Plugin report for Generic" 
 		Platform="RubusRTE-1.0" 
 		Plugin="Generic" 
-		Time="T10:08:02" 
-		UUID="3302992a-a0e6-4f85-bdf5-03f1fa8f1351" 
+		Time="T11:59:13" 
+		UUID="3fcfd11e-2006-450f-b207-a54c7c1e5d6e" 
 		Version="v3.9.1 (Build 77) 2011a" 
 		>
 	</Header>
 	<Section 
 		Index="0" 
 		Name="OS Resource Objects Allocated" 
-		UUID="edd7ac41-0ee5-4b03-9f6f-4de9a970a660" 
+		UUID="d6c6d6cb-51bc-4652-bdda-7271ae80a30c" 
 		>
 		<Group 
 			Index="2" 
 			Name="Red" 
-			UUID="1ce81161-18e7-47eb-aca6-e24e6a68911e" 
+			UUID="79dc9901-770b-43ba-a6cf-0621e56bcbe5" 
 			>
 			<Entry 
 				Index="1" 
 				Name="RedSchedule" 
-				UUID="0c9b93b7-fd1b-469a-b01f-016ea29b31da" 
+				UUID="b1b4d402-9dcb-485b-aeec-5e76a7fa3276" 
 				Value="3" 
 				>
 			</Entry>
 			<Entry 
 				Index="0" 
 				Name="RedThread" 
-				UUID="79b2e822-74a9-4c80-b8fe-8fec8d7b6bcd" 
+				UUID="6b2221af-4e2c-4c04-ba86-3e0cfc005d4e" 
 				Value="6" 
 				>
 			</Entry>
@@ -52,33 +52,33 @@
 		<Group 
 			Index="3" 
 			Name="Blue" 
-			UUID="e5c6a82e-72d8-44fe-ac5f-024a11db93f4" 
+			UUID="e6b25319-b756-4462-97c3-570e891a055a" 
 			>
 			<Entry 
 				Index="2" 
 				Name="BlueMessageQueue" 
-				UUID="a1523fe0-0b9e-48d0-a8bf-82c3162288d3" 
+				UUID="a60c216a-e5e9-4389-963a-e7faf7dd22a2" 
 				Value="0" 
 				>
 			</Entry>
 			<Entry 
 				Index="3" 
 				Name="BlueSemaphore" 
-				UUID="05927ad9-cfa1-49f7-b391-0916ea0e9a21" 
+				UUID="a576cb10-950c-40ab-9731-fa4c7cccbea5" 
 				Value="0" 
 				>
 			</Entry>
 			<Entry 
 				Index="0" 
 				Name="BlueThread" 
-				UUID="4ee44e89-6855-4cb5-9cf6-7dbf9994be49" 
-				Value="2" 
+				UUID="ba8cd676-2a4f-4ae2-9548-338ce9cdc87a" 
+				Value="4" 
 				>
 			</Entry>
 			<Entry 
 				Index="1" 
 				Name="BlueMutex" 
-				UUID="36d8b5d3-4584-433b-a000-294f1f29d012" 
+				UUID="3f977cef-addf-442e-9824-8f09753ab1ca" 
 				Value="0" 
 				>
 			</Entry>
@@ -86,33 +86,33 @@
 		<Group 
 			Index="0" 
 			Name="Basic" 
-			UUID="bbdd5b25-87f8-4555-a441-ba0273b2687a" 
+			UUID="bb4c787b-8efd-41f5-b44e-4e502542df1a" 
 			>
 			<Entry 
 				Index="2" 
 				Name="BasicMailbox" 
-				UUID="c3c3ee70-4984-4d34-b730-fc3560a725a3" 
+				UUID="38e2b8cf-c6ea-4dca-b75f-d93bbe82b2b4" 
 				Value="0" 
 				>
 			</Entry>
 			<Entry 
 				Index="3" 
 				Name="BasicUser" 
-				UUID="606b56e4-4925-4b33-adeb-b865cfb3a0ae" 
+				UUID="4ef1f765-fc3a-4d84-9fe2-9d605ee6088f" 
 				Value="0" 
 				>
 			</Entry>
 			<Entry 
 				Index="0" 
 				Name="BasicQueue" 
-				UUID="f103af38-8eca-4665-890c-e8461896710f" 
+				UUID="2e720295-c9b0-4650-9ac3-93296dbb2e0e" 
 				Value="0" 
 				>
 			</Entry>
 			<Entry 
 				Index="1" 
 				Name="BasicPool" 
-				UUID="16055ca2-9420-422a-b939-239c40604f83" 
+				UUID="d312d980-7020-43fa-b92d-584685a394e5" 
 				Value="0" 
 				>
 			</Entry>
@@ -120,13 +120,13 @@
 		<Group 
 			Index="1" 
 			Name="Green" 
-			UUID="b12f9bb5-ea9a-4f45-8378-2b5a57b79a8c" 
+			UUID="80f5b62c-b309-4af4-b557-fed76844b1f3" 
 			>
 			<Entry 
 				Index="0" 
 				Name="GreenThread" 
-				UUID="4c0027fb-6e77-4cf6-8bac-1a4202269d59" 
-				Value="0" 
+				UUID="73067f71-a300-4e1f-a8c8-a7aa6a6e4ca3" 
+				Value="2" 
 				>
 			</Entry>
 		</Group>

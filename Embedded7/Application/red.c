@@ -43,7 +43,7 @@ halExit(); break;
 }
 
 void blinky0Main (int *state) {
-//printf("hej");
+printf("hej");
 if (*state == 0) {
 *state = 1;
 leds_turnON(0);
