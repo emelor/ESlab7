@@ -8,7 +8,7 @@
 #include <stdio.h>
 #include "ros_services.h"
 
-//printf("RED ERROR %d in %s\n\r", code,bsObjectName(object->index));
+
 
 
 int_t errorCode;
@@ -29,6 +29,7 @@ halHalt();
 }
 void redError (int_t code,bsObject_t const *object)
 {
+printf("RED ERROR %d in %s\n\r", code,bsObjectName(object->index));
 errorCode = code;
 errorObject = object;
 if (code != R_ERROR_DEADLINE_OVERRUN) {

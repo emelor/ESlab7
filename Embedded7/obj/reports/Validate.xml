@@ -10,7 +10,7 @@
 -->
 <document 
 	Model="REPORT" 
-	UUID="7d8de79b-ded7-4bf6-b4ac-66f521e7d251" 
+	UUID="2701d356-a0f9-4ace-a06a-1c67cafa3850" 
 	version="2010-08-01" 
 	>
 	<Header 
@@ -19,8 +19,8 @@
 		Name="Plugin report for Validate" 
 		Platform="RubusRTE-1.0" 
 		Plugin="Validate" 
-		Time="T11:59:13" 
-		UUID="ecee6eb8-156a-42d0-8b8d-74e39392654f" 
+		Time="T14:20:44" 
+		UUID="d7f195dc-8c80-405e-9414-2aa946707a71" 
 		Version="v3.9.1 (Build 77) 2011a" 
 		>
 	</Header>

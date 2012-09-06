@@ -15,7 +15,8 @@ blinky0Args = 0;
 blinky1Args = 0;
 blinky2Args = 0;
 blinky3Args = 0;
-redSetSchedule(&redScheduleBlinky0);
+redSetSchedule(&redSchedule3);
+//redSetSchedule(&redScheduleBlinky0);
 //redSetSchedule(&redSchedule2);
 }
 
@@ -27,6 +28,7 @@ void blinkyReschedMain (blinkyModeType *state)
 {
 (state->counter)++;
 if (state->counter == 10) {
+//printf("reschedMain");
 state->counter = 0;
 state->schedule = 3 - state->schedule; //switch
 switch (state->schedule) {
@@ -43,7 +45,7 @@ halExit(); break;
 }
 
 void blinky0Main (int *state) {
-printf("hej");
+//printf("hej hej hej overrun");
 if (*state == 0) {
 *state = 1;
 leds_turnON(0);

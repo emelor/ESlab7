@@ -153,11 +153,22 @@ redSchedAttr_t const redSchedule2 = {
 };
 
 /*==========================================================
+** Red Schedule redSchedule3
+==========================================================*/
+extern void redSchedule3_0(void);
+redSchedAttr_t const redSchedule3 = {
+  {19,R_OBJECT_RED_SCHEDULE,0},
+  200,
+  0,
+  redSchedule3_0
+};
+
+/*==========================================================
 ** Red Schedule redScheduleStart
 ==========================================================*/
 extern void redScheduleStart_0(void);
 redSchedAttr_t const redScheduleStart = {
-  {19,R_OBJECT_RED_SCHEDULE,0},
+  {20,R_OBJECT_RED_SCHEDULE,0},
   10,
   0,
   redScheduleStart_0
@@ -249,7 +260,7 @@ blueThreadAttr_t const blueIdle = {
 /*==========================================================
 ** bsIdNameTable
 ==========================================================*/
-bsIdNameElement_t const bsIdNameTable[20] ={
+bsIdNameElement_t const bsIdNameTable[21] ={
   /*  0 */ {"bsAttr",6},
   /*  1 */ {"bsLogAttr",9},
   /*  2 */ {"greenAttr",9},
@@ -269,18 +280,19 @@ bsIdNameElement_t const bsIdNameTable[20] ={
   /* 16 */ {"blinky3",7},
   /* 17 */ {"redScheduleBlinky0",18},
   /* 18 */ {"redSchedule2",12},
-  /* 19 */ {"redScheduleStart",16}
+  /* 19 */ {"redSchedule3",12},
+  /* 20 */ {"redScheduleStart",16}
 };
 
 /*==========================================================
 ** bsAttr
 ==========================================================*/
 extern char_t const *bsOSLabel;
-extern bsLogIdArray_t bsLogIdArray[20];
-char_t const * const bsLabelDate = "2012-09-06T11:59:13";
+extern bsLogIdArray_t bsLogIdArray[21];
+char_t const * const bsLabelDate = "2012-09-06T14:20:44";
 char_t const * const bsLabelCoder = "Generic:v3.9.1 (Build 77) 2011a";
 char_t const * const bsLabelIdentifier = "6f9f9469-109f-447e-b98b-ec7ec0e712de";
-bsObject_t const * const bsIdTable[20] ={
+bsObject_t const * const bsIdTable[21] ={
   /*  0 */ (bsObject_t const *)&bsAttr,
   /*  1 */ (bsObject_t const *)&bsLogAttr,
   /*  2 */ (bsObject_t const *)&greenAttr,
@@ -300,7 +312,8 @@ bsObject_t const * const bsIdTable[20] ={
   /* 16 */ (bsObject_t const *)&blinky3,
   /* 17 */ (bsObject_t const *)&redScheduleBlinky0,
   /* 18 */ (bsObject_t const *)&redSchedule2,
-  /* 19 */ (bsObject_t const *)&redScheduleStart
+  /* 19 */ (bsObject_t const *)&redSchedule3,
+  /* 20 */ (bsObject_t const *)&redScheduleStart
 };
 
 bsAttr_t const bsAttr = {
@@ -311,7 +324,7 @@ bsAttr_t const bsAttr = {
   4000000,
   3u,
   0u,
-  20,
+  21,
   &bsLogIdArray[0],
   &bsIdTable[0],
   &bsIdNameTable[0],

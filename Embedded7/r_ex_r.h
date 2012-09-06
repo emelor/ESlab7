@@ -77,6 +77,11 @@ extern redSchedAttr_t const redScheduleBlinky0;
 extern redSchedAttr_t const redSchedule2;
 
 /*==========================================================
+** Red Schedule redSchedule3
+==========================================================*/
+extern redSchedAttr_t const redSchedule3;
+
+/*==========================================================
 ** Red Schedule redScheduleStart
 ==========================================================*/
 extern redSchedAttr_t const redScheduleStart;

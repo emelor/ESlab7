@@ -147,6 +147,32 @@
 				>
 			</Plugins>
 			<RedSchedule 
+				Name="redScheduleStart" 
+				StartSchedueleActivate="0" 
+				TimePeriod="10 ms" 
+				UUID="08d1103d-b8f1-489f-b94a-99849a4f86c8" 
+				>
+				<RedReleasetime 
+					Name="red_releasetime" 
+					TimeRelease="0 s" 
+					UUID="19f1dbcc-ddea-47b6-aad2-91af03782e27" 
+					>
+					<RedInstance 
+						Index="0" 
+						Name="redInstance" 
+						TimeDeadline="10 ms" 
+						UUID="7e7f3162-6842-4683-b2f0-306762bfa517" 
+						>
+						<CrossRef 
+							Name="ObjectSource" 
+							Reference="..\..\redStart" 
+							UUID="60d76b55-cdbd-463f-9f8d-79d55a889cfe" 
+							>
+						</CrossRef>
+					</RedInstance>
+				</RedReleasetime>
+			</RedSchedule>
+			<RedSchedule 
 				Name="redScheduleBlinky0" 
 				StartSchedueleActivate="0" 
 				TimePeriod="100 ms" 
@@ -186,26 +212,78 @@
 				</RedReleasetime>
 			</RedSchedule>
 			<RedSchedule 
-				Name="redScheduleStart" 
+				Name="redSchedule3" 
 				StartSchedueleActivate="0" 
-				TimePeriod="10 ms" 
-				UUID="08d1103d-b8f1-489f-b94a-99849a4f86c8" 
+				TimePeriod="200 ms" 
+				UUID="09922935-364e-44fa-992f-2f2006a2c212" 
 				>
 				<RedReleasetime 
 					Name="red_releasetime" 
 					TimeRelease="0 s" 
-					UUID="19f1dbcc-ddea-47b6-aad2-91af03782e27" 
+					UUID="38a3560e-0e26-4f76-8fac-af36f3185994" 
 					>
 					<RedInstance 
-						Index="0" 
-						Name="redInstance" 
-						TimeDeadline="10 ms" 
-						UUID="7e7f3162-6842-4683-b2f0-306762bfa517" 
+						Index="3" 
+						Name="redInstance_3" 
+						TimeDeadline="0 s" 
+						UUID="49f204cd-6978-43b9-b550-6f9e2c0cfcb6" 
 						>
 						<CrossRef 
 							Name="ObjectSource" 
-							Reference="..\..\redStart" 
-							UUID="60d76b55-cdbd-463f-9f8d-79d55a889cfe" 
+							Reference="..\..\blinky1" 
+							UUID="ba75089e-5449-4d71-868a-885b4384d0a0" 
+							>
+						</CrossRef>
+					</RedInstance>
+					<RedInstance 
+						Index="4" 
+						Name="redInstance_4" 
+						TimeDeadline="100 ms" 
+						UUID="651d85d8-153d-4cc1-afc7-ac725514470a" 
+						>
+						<CrossRef 
+							Name="ObjectSource" 
+							Reference="..\..\blinky0" 
+							UUID="97f37762-7aef-44bf-94c3-80e0e35251ae" 
+							>
+						</CrossRef>
+					</RedInstance>
+					<RedInstance 
+						Index="2" 
+						Name="redInstance_2" 
+						TimeDeadline="0 s" 
+						UUID="f98002f5-6a01-4d77-b3fe-97300d7672a1" 
+						>
+						<CrossRef 
+							Name="ObjectSource" 
+							Reference="..\..\blinky2" 
+							UUID="fa0fbdf5-6ddb-4c18-9640-80ab7524a346" 
+							>
+						</CrossRef>
+					</RedInstance>
+					<RedInstance 
+						Index="0" 
+						Name="redInstance" 
+						TimeDeadline="0 s" 
+						UUID="ed842853-365c-4307-8911-9f46b4ff87f7" 
+						>
+						<CrossRef 
+							Name="ObjectSource" 
+							Reference="..\..\blinky0" 
+							UUID="89e92edc-fded-4274-b705-b0bf97ab43db" 
+							>
+						</CrossRef>
+					</RedInstance>
+					<RedInstance 
+						Index="1" 
+						Name="redInstance_1" 
+						TimeDeadline="0 s" 
+						UUID="07288487-e780-484c-ac56-b183359f71e8" 
+						>
+						<CrossRef 
+							Name="ObjectSource" 
+							Reference="..\..\blinky1" 
+							UUID="30a40166-f92f-4ec0-bc57-8513e440ec5c" 
 							>
 						</CrossRef>
 					</RedInstance>

@@ -831,13 +831,458 @@ void redSchedule2_195(void)
 }
 
 /*==========================================================
+** Red Schedule redSchedule3 Releasetime 0
+==========================================================*/
+extern void redSchedule3_5(void);
+void redSchedule3_0(void)
+
+{
+  bsLogPut(19,R_LOG_EVENT_1);
+  R_RED_NEXT(&redSchedule3_5,5)
+  blueActivate(&blueKernel);
+  blinky0Internal(0);
+  blinky1Internal(0);
+  blinky2Internal(0);
+  blinky1Internal(0);
+  blinky0Internal(100);
+}
+
+/*==========================================================
+** Red Schedule redSchedule3 Releasetime 5
+==========================================================*/
+extern void redSchedule3_10(void);
+void redSchedule3_5(void)
+
+{
+  R_RED_NEXT(&redSchedule3_10,10)
+  blueActivate(&blueKernel);
+}
+
+/*==========================================================
+** Red Schedule redSchedule3 Releasetime 10
+==========================================================*/
+extern void redSchedule3_15(void);
+void redSchedule3_10(void)
+
+{
+  R_RED_NEXT(&redSchedule3_15,15)
+  blueActivate(&blueKernel);
+}
+
+/*==========================================================
+** Red Schedule redSchedule3 Releasetime 15
+==========================================================*/
+extern void redSchedule3_20(void);
+void redSchedule3_15(void)
+
+{
+  R_RED_NEXT(&redSchedule3_20,20)
+  blueActivate(&blueKernel);
+}
+
+/*==========================================================
+** Red Schedule redSchedule3 Releasetime 20
+==========================================================*/
+extern void redSchedule3_25(void);
+void redSchedule3_20(void)
+
+{
+  R_RED_NEXT(&redSchedule3_25,25)
+  blueActivate(&blueKernel);
+}
+
+/*==========================================================
+** Red Schedule redSchedule3 Releasetime 25
+==========================================================*/
+extern void redSchedule3_30(void);
+void redSchedule3_25(void)
+
+{
+  R_RED_NEXT(&redSchedule3_30,30)
+  blueActivate(&blueKernel);
+}
+
+/*==========================================================
+** Red Schedule redSchedule3 Releasetime 30
+==========================================================*/
+extern void redSchedule3_35(void);
+void redSchedule3_30(void)
+
+{
+  R_RED_NEXT(&redSchedule3_35,35)
+  blueActivate(&blueKernel);
+}
+
+/*==========================================================
+** Red Schedule redSchedule3 Releasetime 35
+==========================================================*/
+extern void redSchedule3_40(void);
+void redSchedule3_35(void)
+
+{
+  R_RED_NEXT(&redSchedule3_40,40)
+  blueActivate(&blueKernel);
+}
+
+/*==========================================================
+** Red Schedule redSchedule3 Releasetime 40
+==========================================================*/
+extern void redSchedule3_45(void);
+void redSchedule3_40(void)
+
+{
+  R_RED_NEXT(&redSchedule3_45,45)
+  blueActivate(&blueKernel);
+}
+
+/*==========================================================
+** Red Schedule redSchedule3 Releasetime 45
+==========================================================*/
+extern void redSchedule3_50(void);
+void redSchedule3_45(void)
+
+{
+  R_RED_NEXT(&redSchedule3_50,50)
+  blueActivate(&blueKernel);
+}
+
+/*==========================================================
+** Red Schedule redSchedule3 Releasetime 50
+==========================================================*/
+extern void redSchedule3_55(void);
+void redSchedule3_50(void)
+
+{
+  R_RED_NEXT(&redSchedule3_55,55)
+  blueActivate(&blueKernel);
+}
+
+/*==========================================================
+** Red Schedule redSchedule3 Releasetime 55
+==========================================================*/
+extern void redSchedule3_60(void);
+void redSchedule3_55(void)
+
+{
+  R_RED_NEXT(&redSchedule3_60,60)
+  blueActivate(&blueKernel);
+}
+
+/*==========================================================
+** Red Schedule redSchedule3 Releasetime 60
+==========================================================*/
+extern void redSchedule3_65(void);
+void redSchedule3_60(void)
+
+{
+  R_RED_NEXT(&redSchedule3_65,65)
+  blueActivate(&blueKernel);
+}
+
+/*==========================================================
+** Red Schedule redSchedule3 Releasetime 65
+==========================================================*/
+extern void redSchedule3_70(void);
+void redSchedule3_65(void)
+
+{
+  R_RED_NEXT(&redSchedule3_70,70)
+  blueActivate(&blueKernel);
+}
+
+/*==========================================================
+** Red Schedule redSchedule3 Releasetime 70
+==========================================================*/
+extern void redSchedule3_75(void);
+void redSchedule3_70(void)
+
+{
+  R_RED_NEXT(&redSchedule3_75,75)
+  blueActivate(&blueKernel);
+}
+
+/*==========================================================
+** Red Schedule redSchedule3 Releasetime 75
+==========================================================*/
+extern void redSchedule3_80(void);
+void redSchedule3_75(void)
+
+{
+  R_RED_NEXT(&redSchedule3_80,80)
+  blueActivate(&blueKernel);
+}
+
+/*==========================================================
+** Red Schedule redSchedule3 Releasetime 80
+==========================================================*/
+extern void redSchedule3_85(void);
+void redSchedule3_80(void)
+
+{
+  R_RED_NEXT(&redSchedule3_85,85)
+  blueActivate(&blueKernel);
+}
+
+/*==========================================================
+** Red Schedule redSchedule3 Releasetime 85
+==========================================================*/
+extern void redSchedule3_90(void);
+void redSchedule3_85(void)
+
+{
+  R_RED_NEXT(&redSchedule3_90,90)
+  blueActivate(&blueKernel);
+}
+
+/*==========================================================
+** Red Schedule redSchedule3 Releasetime 90
+==========================================================*/
+extern void redSchedule3_95(void);
+void redSchedule3_90(void)
+
+{
+  R_RED_NEXT(&redSchedule3_95,95)
+  blueActivate(&blueKernel);
+}
+
+/*==========================================================
+** Red Schedule redSchedule3 Releasetime 95
+==========================================================*/
+extern void redSchedule3_100(void);
+void redSchedule3_95(void)
+
+{
+  R_RED_NEXT(&redSchedule3_100,100)
+  blueActivate(&blueKernel);
+}
+
+/*==========================================================
+** Red Schedule redSchedule3 Releasetime 100
+==========================================================*/
+extern void redSchedule3_105(void);
+void redSchedule3_100(void)
+
+{
+  R_RED_NEXT(&redSchedule3_105,105)
+  blueActivate(&blueKernel);
+}
+
+/*==========================================================
+** Red Schedule redSchedule3 Releasetime 105
+==========================================================*/
+extern void redSchedule3_110(void);
+void redSchedule3_105(void)
+
+{
+  R_RED_NEXT(&redSchedule3_110,110)
+  blueActivate(&blueKernel);
+}
+
+/*==========================================================
+** Red Schedule redSchedule3 Releasetime 110
+==========================================================*/
+extern void redSchedule3_115(void);
+void redSchedule3_110(void)
+
+{
+  R_RED_NEXT(&redSchedule3_115,115)
+  blueActivate(&blueKernel);
+}
+
+/*==========================================================
+** Red Schedule redSchedule3 Releasetime 115
+==========================================================*/
+extern void redSchedule3_120(void);
+void redSchedule3_115(void)
+
+{
+  R_RED_NEXT(&redSchedule3_120,120)
+  blueActivate(&blueKernel);
+}
+
+/*==========================================================
+** Red Schedule redSchedule3 Releasetime 120
+==========================================================*/
+extern void redSchedule3_125(void);
+void redSchedule3_120(void)
+
+{
+  R_RED_NEXT(&redSchedule3_125,125)
+  blueActivate(&blueKernel);
+}
+
+/*==========================================================
+** Red Schedule redSchedule3 Releasetime 125
+==========================================================*/
+extern void redSchedule3_130(void);
+void redSchedule3_125(void)
+
+{
+  R_RED_NEXT(&redSchedule3_130,130)
+  blueActivate(&blueKernel);
+}
+
+/*==========================================================
+** Red Schedule redSchedule3 Releasetime 130
+==========================================================*/
+extern void redSchedule3_135(void);
+void redSchedule3_130(void)
+
+{
+  R_RED_NEXT(&redSchedule3_135,135)
+  blueActivate(&blueKernel);
+}
+
+/*==========================================================
+** Red Schedule redSchedule3 Releasetime 135
+==========================================================*/
+extern void redSchedule3_140(void);
+void redSchedule3_135(void)
+
+{
+  R_RED_NEXT(&redSchedule3_140,140)
+  blueActivate(&blueKernel);
+}
+
+/*==========================================================
+** Red Schedule redSchedule3 Releasetime 140
+==========================================================*/
+extern void redSchedule3_145(void);
+void redSchedule3_140(void)
+
+{
+  R_RED_NEXT(&redSchedule3_145,145)
+  blueActivate(&blueKernel);
+}
+
+/*==========================================================
+** Red Schedule redSchedule3 Releasetime 145
+==========================================================*/
+extern void redSchedule3_150(void);
+void redSchedule3_145(void)
+
+{
+  R_RED_NEXT(&redSchedule3_150,150)
+  blueActivate(&blueKernel);
+}
+
+/*==========================================================
+** Red Schedule redSchedule3 Releasetime 150
+==========================================================*/
+extern void redSchedule3_155(void);
+void redSchedule3_150(void)
+
+{
+  R_RED_NEXT(&redSchedule3_155,155)
+  blueActivate(&blueKernel);
+}
+
+/*==========================================================
+** Red Schedule redSchedule3 Releasetime 155
+==========================================================*/
+extern void redSchedule3_160(void);
+void redSchedule3_155(void)
+
+{
+  R_RED_NEXT(&redSchedule3_160,160)
+  blueActivate(&blueKernel);
+}
+
+/*==========================================================
+** Red Schedule redSchedule3 Releasetime 160
+==========================================================*/
+extern void redSchedule3_165(void);
+void redSchedule3_160(void)
+
+{
+  R_RED_NEXT(&redSchedule3_165,165)
+  blueActivate(&blueKernel);
+}
+
+/*==========================================================
+** Red Schedule redSchedule3 Releasetime 165
+==========================================================*/
+extern void redSchedule3_170(void);
+void redSchedule3_165(void)
+
+{
+  R_RED_NEXT(&redSchedule3_170,170)
+  blueActivate(&blueKernel);
+}
+
+/*==========================================================
+** Red Schedule redSchedule3 Releasetime 170
+==========================================================*/
+extern void redSchedule3_175(void);
+void redSchedule3_170(void)
+
+{
+  R_RED_NEXT(&redSchedule3_175,175)
+  blueActivate(&blueKernel);
+}
+
+/*==========================================================
+** Red Schedule redSchedule3 Releasetime 175
+==========================================================*/
+extern void redSchedule3_180(void);
+void redSchedule3_175(void)
+
+{
+  R_RED_NEXT(&redSchedule3_180,180)
+  blueActivate(&blueKernel);
+}
+
+/*==========================================================
+** Red Schedule redSchedule3 Releasetime 180
+==========================================================*/
+extern void redSchedule3_185(void);
+void redSchedule3_180(void)
+
+{
+  R_RED_NEXT(&redSchedule3_185,185)
+  blueActivate(&blueKernel);
+}
+
+/*==========================================================
+** Red Schedule redSchedule3 Releasetime 185
+==========================================================*/
+extern void redSchedule3_190(void);
+void redSchedule3_185(void)
+
+{
+  R_RED_NEXT(&redSchedule3_190,190)
+  blueActivate(&blueKernel);
+}
+
+/*==========================================================
+** Red Schedule redSchedule3 Releasetime 190
+==========================================================*/
+extern void redSchedule3_195(void);
+void redSchedule3_190(void)
+
+{
+  R_RED_NEXT(&redSchedule3_195,195)
+  blueActivate(&blueKernel);
+}
+
+/*==========================================================
+** Red Schedule redSchedule3 Releasetime 195
+==========================================================*/
+extern void redSchedule3_0(void);
+void redSchedule3_195(void)
+
+{
+  blueActivate(&blueKernel);
+}
+
+/*==========================================================
 ** Red Schedule redScheduleStart Releasetime 0
 ==========================================================*/
 extern void redScheduleStart_5(void);
 void redScheduleStart_0(void)
 
 {
-  bsLogPut(19,R_LOG_EVENT_1);
+  bsLogPut(20,R_LOG_EVENT_1);
   R_RED_NEXT(&redScheduleStart_5,5)
   blueActivate(&blueKernel);
   redStartInternal(10);

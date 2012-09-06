@@ -125,14 +125,14 @@
 						>
 						<Object 
 							Element="GreenThread" 
-							Pos="(360,920)" 
+							Pos="(40,560)" 
 							Timestamp="2012-09-06T11:58:38" 
 							UUID="64ded140-8e1b-4d2c-944a-d4a23084e245" 
 							>
 						</Object>
 						<Object 
 							Element="RedSchedule" 
-							Pos="(920,280)" 
+							Pos="(600,40)" 
 							Timestamp="2012-09-06T11:58:38" 
 							UUID="70094e3f-9de5-423a-8506-de3901911a0d" 
 							>
@@ -154,7 +154,7 @@
 								RouterTriggerRerouting="1" 
 								RouterTrimSegments="1" 
 								RouterVicinitySize="3" 
-								Timestamp="2012-08-29T10:01:41" 
+								Timestamp="2012-09-06T11:58:38" 
 								UUID="620e767c-b5d2-41e5-831c-1d45ea8d9a29" 
 								ViewCtrlHottrack="1" 
 								ViewCtrlLockGrid="1" 
@@ -172,35 +172,35 @@
 								<Object 
 									Element="RedReleasetime" 
 									Pos="(440,720)" 
-									Timestamp="2012-08-29T10:01:41" 
+									Timestamp="2012-09-06T11:58:38" 
 									UUID="46ecf2e9-bf3b-4806-8ae1-8d9baa83e47f" 
 									>
 								</Object>
 								<Object 
 									Element="RedReleasetime" 
 									Pos="(360,560)" 
-									Timestamp="2012-08-29T10:01:41" 
+									Timestamp="2012-09-06T11:58:38" 
 									UUID="666ce8bb-83a9-4334-b6f9-b03973e947ae" 
 									>
 								</Object>
 								<Object 
 									Element="RedReleasetime" 
 									Pos="(240,240)" 
-									Timestamp="2012-08-29T10:01:41" 
+									Timestamp="2012-09-06T11:58:38" 
 									UUID="7b48cb71-beb1-447e-979b-513ef2c30c19" 
 									>
 								</Object>
 								<Object 
 									Element="RedReleasetime" 
 									Pos="(320,400)" 
-									Timestamp="2012-08-29T10:01:41" 
+									Timestamp="2012-09-06T11:58:38" 
 									UUID="6830875f-1171-4953-a4c6-43741037dbc2" 
 									>
 								</Object>
 								<Object 
 									Element="RedReleasetime" 
 									Pos="(520,880)" 
-									Timestamp="2012-08-29T10:01:41" 
+									Timestamp="2012-09-06T11:58:38" 
 									UUID="a95e2ac9-5ac6-4afa-83fe-84088008f54d" 
 									>
 								</Object>
@@ -208,56 +208,132 @@
 						</Object>
 						<Object 
 							Element="RedThread" 
-							Pos="(840,720)" 
+							Pos="(600,360)" 
 							Timestamp="2012-09-06T11:58:38" 
 							UUID="5f6c8ffa-da8b-48fd-8e27-2c156a222e1b" 
 							>
 						</Object>
 						<Object 
+							Element="BlueThread" 
+							Pos="(320,720)" 
+							Timestamp="2012-09-06T11:58:38" 
+							UUID="74fe9953-6050-4a85-a1e5-a5e26383e6a3" 
+							>
+						</Object>
+						<Object 
+							Element="RedSchedule" 
+							Pos="(920,40)" 
+							Timestamp="2012-09-06T11:58:38" 
+							UUID="09922935-364e-44fa-992f-2f2006a2c212" 
+							>
+							<View 
+								LayoutName="layoutObjectTree" 
+								Name="Complete" 
+								RouterAnchorOptions="0" 
+								RouterCostCrossing="4" 
+								RouterCostLength="8" 
+								RouterCostTurn="4" 
+								RouterCostVicinity="32" 
+								RouterDontOptimizeLongRoutes="0" 
+								RouterGridScaleFactor="1" 
+								RouterGridSize="40" 
+								RouterMode="1" 
+								RouterName="layoutLinkFast" 
+								RouterOrientationEnd="0" 
+								RouterOrientationStart="0" 
+								RouterTriggerRerouting="1" 
+								RouterTrimSegments="1" 
+								RouterVicinitySize="3" 
+								Timestamp="2012-09-06T11:58:38" 
+								UUID="66885d70-3b34-40d8-becf-456d29e901d9" 
+								ViewCtrlHottrack="1" 
+								ViewCtrlLockGrid="1" 
+								ViewCtrlShowGrid="1" 
+								ViewCtrlShowPage="0" 
+								ViewLayersVisible="-1" 
+								ViewSelectionHit="inside" 
+								ViewSelectionStyle="simple" 
+								ViewShowSelection="1" 
+								ViewSize="(0,0)(40000,40000)" 
+								ViewTopLeft="(0,0)" 
+								ViewWheelLines="0" 
+								ViewZoom="100" 
+								>
+								<Object 
+									Element="RedReleasetime" 
+									Pos="(240,520)" 
+									Timestamp="2012-09-06T11:58:38" 
+									UUID="e1ddfab6-e1d0-4ead-9a39-16e1cef4787e" 
+									>
+								</Object>
+								<Object 
+									Element="RedReleasetime" 
+									Pos="(320,680)" 
+									Timestamp="2012-09-06T11:58:38" 
+									UUID="061144e9-1d50-4078-834b-ec7f47ee2c8e" 
+									>
+								</Object>
+								<Object 
+									Element="RedReleasetime" 
+									Pos="(160,120)" 
+									Timestamp="2012-09-06T11:58:38" 
+									UUID="38a3560e-0e26-4f76-8fac-af36f3185994" 
+									>
+								</Object>
+								<Object 
+									Element="RedReleasetime" 
+									Pos="(160,360)" 
+									Timestamp="2012-09-06T11:58:38" 
+									UUID="c41369ef-e2e0-4850-b84f-e8b759d1c0af" 
+									>
+								</Object>
+								<Object 
+									Element="RedReleasetime" 
+									Pos="(40,40)" 
+									Timestamp="2012-09-06T11:58:38" 
+									UUID="d34f8c11-239d-4117-83a9-99580dac4ed4" 
+									>
+								</Object>
+								<Object 
+									Element="RedReleasetime" 
+									Pos="(120,200)" 
+									Timestamp="2012-09-06T11:58:38" 
+									UUID="1ac04d8c-e576-491b-8032-1911b6838156" 
+									>
+								</Object>
+							</View>
+						</Object>
+						<Object 
 							Element="GreenThread" 
-							Pos="(680,960)" 
+							Pos="(320,560)" 
 							Timestamp="2012-09-06T11:58:38" 
 							UUID="17d2a0dc-7a46-49a4-8cc6-950ef801e11e" 
 							>
 						</Object>
 						<Object 
 							Element="BlueThread" 
-							Pos="(440,1120)" 
+							Pos="(40,720)" 
 							Timestamp="2012-09-06T11:58:38" 
 							UUID="6749bd08-6fc4-4e7b-93ad-3b3f5b0a1e34" 
 							>
 						</Object>
 						<Object 
-							Element="BlueThread" 
-							Pos="(720,1120)" 
-							Timestamp="2012-09-06T11:58:38" 
-							UUID="74fe9953-6050-4a85-a1e5-a5e26383e6a3" 
-							>
-						</Object>
-						<Object 
 							Element="RedThread" 
-							Pos="(560,720)" 
-							Timestamp="2012-09-06T11:58:38" 
-							UUID="8f56ebd6-de92-4c11-84d5-a64537165504" 
-							>
-						</Object>
-						<Object 
-							Element="RedThread" 
-							Pos="(1360,600)" 
+							Pos="(600,200)" 
 							Timestamp="2012-09-06T11:58:38" 
 							UUID="9d24fa4f-a6d4-4bc7-9290-9513f07e4b1f" 
 							>
 						</Object>
 						<Object 
 							Element="RedThread" 
-							Pos="(400,440)" 
+							Pos="(40,200)" 
 							Timestamp="2012-09-06T11:58:38" 
 							UUID="c5621041-dc6d-48c9-95cb-d1613de56f9b" 
 							>
 						</Object>
 						<Object 
 							Element="RedSchedule" 
-							Pos="(400,280)" 
+							Pos="(40,40)" 
 							Timestamp="2012-09-06T11:58:38" 
 							UUID="08d1103d-b8f1-489f-b94a-99849a4f86c8" 
 							>
@@ -304,22 +380,8 @@
 							</View>
 						</Object>
 						<Object 
-							Element="RedThread" 
-							Pos="(280,720)" 
-							Timestamp="2012-09-06T11:58:38" 
-							UUID="78109545-2a08-4892-a667-17f2c453bc82" 
-							>
-						</Object>
-						<Object 
-							Element="RedThread" 
-							Pos="(640,440)" 
-							Timestamp="2012-09-06T11:58:38" 
-							UUID="dd1b0b55-fac0-42af-8672-990a308dd5b3" 
-							>
-						</Object>
-						<Object 
 							Element="RedSchedule" 
-							Pos="(640,280)" 
+							Pos="(320,40)" 
 							Timestamp="2012-09-06T11:58:38" 
 							UUID="2ded2c87-140a-4e8c-a419-d67e0e89f2f3" 
 							>
@@ -364,6 +426,27 @@
 									>
 								</Object>
 							</View>
+						</Object>
+						<Object 
+							Element="RedThread" 
+							Pos="(320,360)" 
+							Timestamp="2012-09-06T11:58:38" 
+							UUID="8f56ebd6-de92-4c11-84d5-a64537165504" 
+							>
+						</Object>
+						<Object 
+							Element="RedThread" 
+							Pos="(40,360)" 
+							Timestamp="2012-09-06T11:58:38" 
+							UUID="78109545-2a08-4892-a667-17f2c453bc82" 
+							>
+						</Object>
+						<Object 
+							Element="RedThread" 
+							Pos="(320,200)" 
+							Timestamp="2012-09-06T11:58:38" 
+							UUID="dd1b0b55-fac0-42af-8672-990a308dd5b3" 
+							>
 						</Object>
 					</View>
 				</Object>

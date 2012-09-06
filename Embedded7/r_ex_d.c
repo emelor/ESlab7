@@ -114,7 +114,7 @@ blueThreadCB_t xhpHandlerTxCB;
 ==========================================================*/
 blueThreadCB_t blueIdleCB;
 
-bsLogIdArray_t bsLogIdArray[20];
+bsLogIdArray_t bsLogIdArray[21];
 
 /*==========================================================
 ** bsAttr
